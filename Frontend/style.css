@@ -248,4 +248,61 @@ gap:15px;
     position:relative;
     overflow:hidden;
 }
+/* ================= MOBILE RESPONSIVE ================= */
 
+@media screen and (max-width: 768px) {
+
+    body{
+        padding: 10px;
+        overflow-x: hidden;
+    }
+
+    .container{
+        width: 100%;
+        padding: 15px;
+    }
+
+    textarea{
+        width: 100%;
+        height: 300px;
+        font-size: 14px;
+    }
+
+    h1{
+        font-size: 28px;
+        text-align: center;
+    }
+
+    h2{
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .stats-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .stat-box{
+        width: 100%;
+        padding: 15px;
+    }
+
+    button{
+        width: 100%;
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .quality-score{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .suggestions{
+        width: 100%;
+        word-wrap: break-word;
+    }
+}
