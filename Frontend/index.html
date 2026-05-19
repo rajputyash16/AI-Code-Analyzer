@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Code Reviewer</title>
+<link rel="icon" type="image/png" href="lo.png">
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- BACKGROUND OVERLAY -->
+<div class="overlay"></div>
+
+<!-- MAIN CONTAINER -->
+<div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <h1 class="main-title">
+         <span class="ai">AI</span>
+         <span class="code">Code</span>
+         <span class="reviewer">Reviewer</span>
+        </h1>
+
+        <p class="tagline">
+            AI-Powered Code Review & Suggestions System
+        </p>
+
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main class="main-content">
+
+        <!-- LEFT SIDE -->
+        <div class="editor-section">
+
+            <div class="editor-header">
+
+                <p class="upload-text">
+                    Upload your code snippet and let AI provide smart code suggestions!
+                </p>
+
+            </div>
+
+            <!-- CODE AREA -->
+            <textarea
+                id="codeInput"
+                class="code-editor"
+                placeholder="Paste your code here..."
+            ></textarea>
+
+            <!-- BUTTON -->
+            <button id="analyzeBtn" class="analyze-btn">
+
+                Review Code
+
+            </button>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div id="resultsSection" class="results-section">
+
+            <!-- TOP -->
+            <div class="results-header">
+
+                <h2>
+                    Code Improvements & Suggestions
+                </h2>
+
+
+            </div>
+
+            <!-- METRICS -->
+            <div class="results-grid">
+
+                <div class="metric-card">
+                    <h3 id="linesOfCode">0</h3>
+                    <p>Lines</p>
+                </div>
+
+                <div class="metric-card">
+                    <h3 id="loopsCount">0</h3>
+                    <p>Loops</p>
+                </div>
+
+                <div class="metric-card">
+                    <h3 id="timeComplexity">O(1)</h3>
+                    <p>Complexity</p>
+                </div>
+
+                <div class="metric-card">
+                    <h3 id="conditionalsCount">0</h3>
+                    <p>Conditions</p>
+                </div>
+
+            </div>
+
+            <!-- QUALITY SCORE -->
+            <div class="quality-box">
+
+                <div class="quality-circle">
+
+                    <span id="scoreValue">95</span>%
+
+                </div>
+
+                <p>Quality Score</p>
+
+            </div>
+
+            <!-- SUGGESTIONS -->
+            <div class="suggestions-section">
+
+                <div id="suggestionsList">
+
+                    <div class="suggestion-item">
+                        ✔ Use meaningful variable names for better readability.
+                    </div>
+
+                    <div class="suggestion-item">
+                        ✔ Avoid unnecessary nested loops to improve performance.
+                    </div>
+
+                    <div class="suggestion-item">
+                        ✔ Remove redundant print statements from production code.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CODE PREVIEW -->
+            <div class="code-preview">
+
+<pre>
+<code id="codePreview" class="language-java"></code>
+</pre>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- PRISM -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
